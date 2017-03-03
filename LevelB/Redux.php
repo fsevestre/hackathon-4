@@ -18,8 +18,10 @@ class Redux
      */
     public function getReductedNumber()
     {
-        $result = $this->number;
-        // @TODO
-        return $result;
+        while ($this->number >= 10) {
+            $this->number = array_sum(str_split($this->number));
+        }
+
+        return $this->number;
     }
 };
